@@ -1,0 +1,38 @@
+CODE FOR QUICKDBD ENTITY RELATIONSHIP DIAGRAM
+employees
+-
+emp_id PK FK >- salaries.emp_id
+title_id FK >- titles.title_id
+birth_date
+first_name
+last_name
+sex
+hire_date
+
+dept_manager
+-
+id PK
+dept_id PK
+emp_id FK -< employees.emp_id
+
+dept_emp
+-
+id PK
+emp_id PK FK -< employees.emp_id
+dept_id FK - departments.dept_id
+
+
+departments
+-
+dept_id PK FK - dept_manager.dept_id
+dept_name
+
+salaries
+-
+emp_id PK
+salary 
+
+titles
+-
+title_id PK FK  employees.title_id
+title 
